@@ -1,37 +1,40 @@
-def binary_numbers():
+def binary_numbers(string):
+    if re.search(r"[2-9]", string):
+        return False
+    return True
 
 
-def binary_even():
+def binary_even(string):
 
 
-def hexadecimal():
+def hexadecimal(string):
 
 
-def word():
+def word(string):
 
 
-def words():
+def words(string):
 
 
-def phone_numbers():
+def phone_numbers(string):
 
 
-def money():
+def money(string):
 
 
-def zip():
+def zip(string):
 
 
-def date():
+def date(string):
 
 
 ## HARD MODE BEGINS
 
 
-def hard_date():
+def hard_date(string):
 
 
-def email():
+def email(string):
 
 
-def address():
+def address(string):
