@@ -1,37 +1,37 @@
-def test_binary_numbers():
+def binary_numbers():
 
 
-def test_binary_even():
+def binary_even():
 
 
-def test_hexadecimal():
+def hexadecimal():
 
 
-def test_word():
+def word():
 
 
-def test_words():
+def words():
 
 
-def test_phone_numbers():
+def phone_numbers():
 
 
-def test_money():
+def money():
 
 
-def test_zip():
+def zip():
 
 
-def test_date():
+def date():
 
 
 ## HARD MODE BEGINS
 
 
-def test_hard_date():
+def hard_date():
 
 
-def test_email():
+def email():
 
 
-def test_address():
+def address():

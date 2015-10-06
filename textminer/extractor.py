@@ -1,7 +1,7 @@
-def test_phone_numbers():
+def phone_numbers():
 
 
 ## HARD MODE BEGINS
 
 
-def test_emails():
+def emails():
