@@ -17,7 +17,9 @@ def hexadecimal(string):
 
 
 def word(string):
-    if re.findall(r"(\w+[^\d\S])", string):
+    if re.findall(r"(\w+[^\d])", string):
+        if re.findall(r"[!*]", string):
+            return False
         return True
     return False
 
@@ -29,7 +31,7 @@ def words(string):
 
 
 def phone_numbers(string):
-    if re.findall(r"(\(?[\d]{3}\)?).?([\d]{3}.?[\d]{4})", string)
+    if re.findall(r"(\(?[\d]{3}\)?).?([\d]{3}.?[\d]{4})", string):
         return True
     return False
 
@@ -42,9 +44,11 @@ def money(string):
         string = ''.join(string)
     cash_money = {}
     if string.count('.'):
-        if not re.findall(r".\d{2}", string):
+        if not re.findall(r"\.\d{1,2}$", string):
             return False
     if string.count('$') > 1:
+        return False
+    if re.findall(r"([^\d])", string):
         return False
     cash = re.findall(r"(\S)(\d+.?(?:\d+))", string)
     if len(cash[0]) < 2:
@@ -52,17 +56,17 @@ def money(string):
     return True
 
 
-def zips(string):
+def zipcode(inputs):
     zip_code = {}
-    full_zip = re.findall(r"(\d+)(-?\d{4})?", string)
+    full_zip = re.findall(r"(\d+)(-?\d{4})?", inputs)
     if full_zip == []:
         return False
     zips, plus4 = full_zip[0]
     if len(zips) != 5:
         return False
     zip_code["zip"] = zips
-    if plus4 == '':
-        plus4 = False
+    if plus4 == '' and len(plus4) != 4:
+        return False
     return True
 
 
