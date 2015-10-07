@@ -16,9 +16,6 @@ def phone_numbers(inputs):
     phone_number["area_code"] = area_code
     return phone_number
 
-if inputs.count(','):
-    inputs = re.findall(r"([^\,])", inputs)
-    inputs = ''.join(inputs)
 
 def money(inputs):
     if inputs.count(','):
